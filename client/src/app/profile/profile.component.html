@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="jumbotron mt-5">
+        <div class="col-sm-8 mx-auto">
+            <h1 class="text-center">PROFILE</h1>
+        </div>
+        <table class="table colmd-6 max-auto">
+            <tr>
+                <td>First Name</td>
+                <td>{{auth.getUserDetails()?.first_name}}</td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td>{{auth.getUserDetails()?.last_name}}</td>
+            </tr>
+            <tr>
+                <td>User Name</td>
+                <td>{{auth.getUserDetails()?.user_name}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

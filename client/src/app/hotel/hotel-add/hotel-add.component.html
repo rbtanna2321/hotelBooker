@@ -1,0 +1,163 @@
+
+        <section class="forms">
+            <div class="container">
+              <!-- Page Header-->
+        
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="card">
+                    <div class="card-header d-flex align-items-center">
+                      <h4>Hotel Details Form</h4>
+                    </div>
+                    <div class="card-body">
+                        <form class="form-horizontal"  (submit)="addHotel()" >
+                            <div class="input-group form-group row">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" name="firstname" class="form-control" placeholder="Name" [(ngModel)]= "hotel.hotel_name">
+                                <p class="text-danger">{{errorMsg.hotel_name}}</p>
+        
+                            </div>
+                            <div class="input-group form-group row">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" name="faciliety" class="form-control" placeholder="faciliety" [(ngModel)]= "hotel.facilieties">
+                                <p class="text-danger">{{errorMsg.facilieties}}</p>
+                            </div>
+          
+                            <div class="input-group form-group row">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-envelop"></i></span>
+                                </div>
+                                <input type="text" name="address" class="form-control" placeholder="Address" [(ngModel)]= "hotel.address">
+                                <p class="text-danger">{{errorMsg.address}}</p>
+                            </div>
+
+                            
+                              <div class="form-group">
+                                  <img class="imgc"  [src]="url" height="200"> 
+                                  <div class="cls"> <input class="hidden" type='file' (change)="onSelectFile($event)"></div>
+                                 
+                              </div>   
+                            <div class="form-group">
+                                <input type="submit" name="btn" value="addHotel" class="btn btn-outline-danger float-right login_btn">
+                            </div>          
+                        </form>
+                    </div>
+                  </div>
+                </div>   
+                <!-- <div class="col-lg-12">
+                    <div class="card">
+                      <div class="card-header d-flex align-items-center">
+                        <h4>Hotel Details Form</h4>
+                      </div>
+                      <div class="card-body">
+                        <form class="form-horizontal">     
+                          <div class="form-group row">
+                            <label class="col-sm-2 form-control-label">Hotel Name</label>
+                            <div class="col-sm-10">
+                              <input type="text" placeholder="Hotel Name" class="form-control">
+                            </div>
+                          </div>
+                          <div class="line"></div>
+                          <div class="form-group row">
+                            <label class="col-sm-2 form-control-label">Facilieties</label>
+                            <div class="col-sm-10">
+                              <label class="checkbox-inline">
+                                <input id="inlineCheckbox1" type="checkbox" value="option1"> Welcom Drink
+                              </label>
+                              <label class="checkbox-inline">
+                                <input id="inlineCheckbox2" type="checkbox" value="option2"> Swimming Pool
+                              </label>
+                              <label class="checkbox-inline">
+                                <input id="inlineCheckbox3" type="checkbox" value="option3"> Bar
+                              </label>
+                              <label class="checkbox-inline">
+                                  <input id="inlineCheckbox3" type="checkbox" value="option3"> Pub
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input id="inlineCheckbox3" type="checkbox" value="option3"> Bar
+                                  </label>
+                            </div>
+                          </div>
+                          <div class="line"></div>
+                          <div class="form-group row">
+                            <label class="col-sm-2 form-control-label">Checkboxes &amp; radios <br><small class="text-primary">Custom elements</small></label>
+                            <div class="col-sm-10">
+                              <div class="i-checks">
+                                <input id="checkboxCustom1" type="checkbox" value="" class="form-control-custom">
+                                <label for="checkboxCustom1">Option one</label>
+                              </div>
+                              <div class="i-checks">
+                                <input id="checkboxCustom2" type="checkbox" value="" checked="" class="form-control-custom">
+                                <label for="checkboxCustom2">Option two checked</label>
+                              </div>
+                              <div class="i-checks">
+                                <input id="checkboxCustom" type="checkbox" value="" disabled="" checked="" class="form-control-custom">
+                                <label for="checkboxCustom">Option three checked and disabled</label>
+                              </div>
+                              <div class="i-checks">
+                                <input id="checkboxCustom3" type="checkbox" value="" disabled="" class="form-control-custom">
+                                <label for="checkboxCustom3">Option four disabled</label>
+                              </div>
+                              <div class="i-checks">
+                                <input id="radioCustom1" type="radio" value="option1" name="a" class="form-control-custom radio-custom">
+                                <label for="radioCustom1">Option one</label>
+                              </div>
+                              <div class="i-checks">
+                                <input id="radioCustom2" type="radio" checked="" value="option2" name="a" class="form-control-custom radio-custom">
+                                <label for="radioCustom2">Option two checked</label>
+                              </div>
+                              <div class="i-checks">
+                                <input id="radioCustom3" type="radio" disabled="" checked="" value="option2" class="form-control-custom radio-custom">
+                                <label for="radioCustom3">Option three checked and disabled</label>
+                              </div>
+                              <div class="i-checks">
+                                <input id="radioCustom4" type="radio" disabled="" name="a" class="form-control-custom radio-custom">
+                                <label for="radioCustom4">Option four disabled</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="line"></div>
+                          <div class="form-group row">
+                            <label class="col-sm-2 form-control-label">Select</label>
+                            <div class="col-sm-10 mb-3">
+                              <select name="account" class="form-control">
+                                <option>option 1</option>
+                                <option>option 2</option>
+                                <option>option 3</option>
+                                <option>option 4</option>
+                              </select>
+                            </div>
+                            <div class="col-sm-10 offset-sm-2">
+                              <select multiple="" class="form-control">
+                                <option>option 1</option>
+                                <option>option 2</option>
+                                <option>option 3</option>
+                                <option>option 4</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="line"></div>
+                          <div class="form-group row has-success">
+                            <label class="col-sm-2 form-control-label">Input with success</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control is-valid">
+                            </div>
+                          </div>
+                          <div class="line"></div>
+                          <div class="form-group row">
+                            <div class="col-sm-4 offset-sm-2">
+                              <button type="submit" class="btn btn-secondary">Cancel</button>
+                              <button type="submit" class="btn btn-primary">Save changes</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div> -->
+              </div>
+            </div>
+          </section>

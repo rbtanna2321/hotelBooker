@@ -1,0 +1,21 @@
+<nav class="side-navbar">
+  <div class="side-navbar-wrapper">
+    <!-- Sidebar Header    -->
+    <div class="sidenav-header d-flex align-items-center justify-content-center">
+      <!-- User Info-->
+      <div class="sidenav-header-inner text-center">
+        <h2 class="h5">{{auth.getUserDetails()?.first_name}}</h2>
+      </div>
+      </div>
+      <!-- Small Brand information, appears on minimized sidebar-->
+    <!-- Sidebar Navigation Menus-->
+    <div class="main-menu">
+      <h5 class="sidenav-heading">Main</h5>
+      <ul id="side-main-menu" class="side-menu list-unstyled">                  
+        <li><a routerLink="/admin"> <i class="icon-home"></i>Dashboard                             </a></li>
+        <li><a routerLink="/admin/hotel"> <i class="icon-home"></i>Hotel                             </a></li>
+        <li><a routerLink="/admin/room"> <i class="icon-home"></i>Room                             </a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

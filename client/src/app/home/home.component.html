@@ -1,0 +1,107 @@
+<div *ngIf="auth.isLoggedIn()">
+    <app-sidebar></app-sidebar>
+    </div>
+    <div *ngIf="!auth.isLoggedIn()">
+    <div class="page" style="width: 100% !important">
+      <!-- navbar-->
+      <header class="header">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <div class="navbar-holder d-flex align-items-center justify-content-between">
+              <div class="navbar-header"><a href="index.html" class="navbar-brand">
+                  <div class=""><strong class="text-primary">Dashboard</strong></div></a></div>
+              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                <!-- Notifications dropdown-->
+            
+                <li class="nav-item" *ngIf="auth.isLoggedIn()">
+                  <a routerLink="/admin" class="nav-link">Home</a>
+                </li>
+                <li *ngIf="!auth.isLoggedIn()" class="nav-item">
+                  <a routerLink="/admin/login" class="nav-link">Login</a>
+                </li>
+                <li *ngIf="!auth.isLoggedIn()" class="nav-item">
+                  <a routerLink="/admin/register" class="nav-link">Register</a>
+                </li>
+                <li *ngIf="auth.isLoggedIn()" class="nav-item">
+                  <a routerLink="/admin/profile" class="nav-link">{{auth.getUserDetails()?.first_name}}</a>
+                </li>
+                <li *ngIf="auth.isLoggedIn()"  class="nav-item">
+                  <a routerLink="/admin/logout" class="nav-link" (click)="auth.logout()" >Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- Counts Section -->
+      <section class="">
+        <router-outlet></router-outlet>
+      </section>
+      
+      <footer class="main-footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+              <p>Your company &copy; 2017-2019</p>
+            </div>
+            <div class="col-sm-6 text-right">
+              <p>Design by <a href="https://bootstrapious.com/p/bootstrap-4-dashboard" class="external">Bootstrapious</a></p>
+              <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions and it helps me to run Bootstrapious. Thank you for understanding :)-->
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    </div>
+    <div *ngIf="auth.isLoggedIn()">
+        <div class="page">
+          <!-- navbar-->
+          <header class="header">
+            <nav class="navbar">
+              <div class="container-fluid">
+                <div class="navbar-holder d-flex align-items-center justify-content-between">
+                  <div class="navbar-header"><a href="index.html" class="navbar-brand">
+                      <div class=""><strong class="text-primary">Dashboard</strong></div></a></div>
+                  <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                    <!-- Notifications dropdown-->
+                
+                    <li class="nav-item" *ngIf="auth.isLoggedIn()">
+                      <a routerLink="/admin" class="nav-link">Home</a>
+                    </li>
+                    <li *ngIf="!auth.isLoggedIn()" class="nav-item">
+                      <a routerLink="/admin/login" class="nav-link">Login</a>
+                    </li>
+                    <li *ngIf="!auth.isLoggedIn()" class="nav-item">
+                      <a routerLink="/admin/register" class="nav-link">Register</a>
+                    </li>
+                    <li *ngIf="auth.isLoggedIn()" class="nav-item">
+                      <a routerLink="/admin/profile" class="nav-link">{{auth.getUserDetails()?.first_name}}</a>
+                    </li>
+                    <li *ngIf="auth.isLoggedIn()"  class="nav-item">
+                      <a routerLink="/admin/login" class="nav-link" (click)="auth.logout()" >Logout</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </header>
+          <!-- Counts Section -->
+          <section class="">
+            <router-outlet></router-outlet>
+          </section>
+          
+          <footer class="main-footer">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-6">
+                  <p>Your company &copy; 2017-2019</p>
+                </div>
+                <div class="col-sm-6 text-right">
+                  <p>Design by <a href="https://bootstrapious.com/p/bootstrap-4-dashboard" class="external">Bootstrapious</a></p>
+                  <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions and it helps me to run Bootstrapious. Thank you for understanding :)-->
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+        </div>

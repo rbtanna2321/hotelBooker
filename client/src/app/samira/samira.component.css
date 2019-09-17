@@ -1,0 +1,29 @@
+@import "../../assets/font-awesome-4.7.0/css/font-awesome.min.css";
+@import "../../assets/css/responsive.css";
+@import "../../assets/css/main_styles.css";
+@import "../../assets/OwlCarousel2-2.2.1/animate.css";
+@import "../../assets/OwlCarousel2-2.2.1/owl.theme.default.css";
+@import "../../assets/OwlCarousel2-2.2.1/owl.carousel.css";
+@import "../../assets/colorbox/colorbox.css";
+@import "../../assets/css/bootstrap-4.1.2/bootstrap.min.css";
+
+.owl-carousel {
+    height: 948px !important;
+    margin: 0 !important;
+}
+.room_col {
+    margin-bottom: 5rem !important;
+}
+
+.slide-image{
+    height: 948px !important;
+}
+.owl-item {
+    height: 948px !important;
+}
+.owl-theme{
+    margin: 0 !important;
+}
+.imgc{
+    width: 100% !important;
+}

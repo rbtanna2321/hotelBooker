@@ -1,0 +1,53 @@
+
+        <section class="forms">
+            <div class="container">
+              <!-- Page Header-->
+        
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="card">
+                    <div class="card-header d-flex align-items-center">
+                      <h4>Room Details Form</h4>
+                    </div>
+                    <div class="card-body">
+                        <form class="form-horizontal"  (submit)="addRoom()" >
+                            <div class="input-group form-group row">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" name="firstname" class="form-control" placeholder="Name" [(ngModel)]= "room.room_name">
+                                <p class="text-danger">{{errorMsg.room_name}}</p>
+        
+                            </div>
+                            <div class="input-group form-group row">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" name="faciliety" class="form-control" placeholder="faciliety" [(ngModel)]= "room.facilieties">
+                                <p class="text-danger">{{errorMsg.facilieties}}</p>
+                            </div>
+          
+                            <div class="input-group form-group row">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-envelop"></i></span>
+                                </div>
+                                <input type="text" name="address" class="form-control" placeholder="Address" [(ngModel)]= "room.address">
+                                <p class="text-danger">{{errorMsg.address}}</p>
+                            </div>
+
+                            
+                              <div class="form-group">
+                                  <img class="imgc"  [src]="url" height="200"> 
+                                  <div class="cls"> <input class="hidden" type='file' (change)="onSelectFile($event)"></div>
+                                 
+                              </div>   
+                            <div class="form-group">
+                                <input type="submit" name="btn" value="addRoom" class="btn btn-outline-danger float-right login_btn">
+                            </div>          
+                        </form>
+                    </div>
+                  </div>
+                </div>      
+              </div>
+            </div>
+          </section>
