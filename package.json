@@ -19,6 +19,6 @@
     "mongoose-autopopulate": "^0.9.1",
     "node-pre-gyp": "^0.13.0",
     "nodemon": "^1.18.3",
-    "underscore": "^1.9.1"
+    "underscore": "^1.12.1"
   }
 }
